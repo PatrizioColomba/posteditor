@@ -14,7 +14,7 @@ function createWindow() {
         }
     })
 
-    mainWindow.loadURL("http://localhost:3000");
+    mainWindow.loadURL("http://localhost:"+startExpress());
 
     mainWindow.on('closed', function() {
         springService.kill('SIGHUP');
@@ -36,3 +36,16 @@ app.whenReady().then(() => {
         }
     });
 });
+
+function startExpress() {
+    var express = require('express'),
+    app = express(),
+    port = process.env.PORT || 4000;
+
+    console.log("Express server on port " + port);
+
+    app.use(express.static(__dirname + '/../build'));
+    app.listen(port);
+
+    return port;
+}
