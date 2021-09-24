@@ -25,7 +25,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "electron-dev": "electron ."
+    "electron-dev": "npm run build && electron ."
   },
   "eslintConfig": {
     "parser": "babel-eslint",
