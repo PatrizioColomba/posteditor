@@ -1,13 +1,13 @@
-package com.example.spring;
+package io.github.patriziocolomba.service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DemoApplication {
+public class PostEditorApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(PostEditorApplication.class, args);
 	}
 
 }
